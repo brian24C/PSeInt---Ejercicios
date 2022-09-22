@@ -1,6 +1,6 @@
 Algoritmo sin_titulo
 	
-	Escribir "VENTAS DE LA SEMANA DE 5 PRODUCTOS"
+	Escribir "VENTAS DE LA SEMANA"
 	
 	Definir M,V,n,i,j,mayor,suma,posicion_representante Como Entero
 	

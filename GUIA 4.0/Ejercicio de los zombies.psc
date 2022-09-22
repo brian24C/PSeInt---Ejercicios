@@ -1,26 +1,20 @@
 Funcion  retorno=comprobar ( M, long,muestra )
 	
-	Definir retorno,a como logico
+	Definir retorno como logico
 	Definir i,j Como Entero
-	Definir va Como Caracter
 	retorno=Falso
 	
 	i=0
 	j=1
-	a=Verdadero
-		Mientras M(j,j)=M(i,i) y j<raiz(long) y a=Verdadero Hacer
+		Mientras M(j,j)=M(i,i) y j<raiz(long) y retorno=Falso Hacer
 			
 			i=i+1
 			j=j+1
 			
-			si j=raiz(long)  Entonces
-				retorno=Verdadero
-			FinSi
-			
 			si j=raiz(long) Entonces
 				j=j-1
 				i=i-1
-				a=falso
+				retorno=Verdadero
 			FinSi
 			
 		Fin Mientras
@@ -31,32 +25,26 @@ Fin Funcion
 
 Funcion  retorno2=comprobar2 ( M, long,muestra )
 	
-	Definir retorno2,a como logico
+	Definir retorno2 como logico
 	Definir i,j,x,p Como Entero
-	Definir va Como Caracter
 	retorno2=Falso
 	
 	i=0
 	j=raiz(long)-1
-	a=Verdadero
 	x=i+1
 	p=j-1
-	Mientras M(i,j)=M(x,p) y i<raiz(long) y a=Verdadero Hacer
+	Mientras M(i,j)=M(x,p) y i<raiz(long) y retorno2=falso Hacer
 		
 		i=i+1
 		j=j-1
 		x=i+1
 		p=j-1
-		
-		si x=raiz(long)  Entonces
-			retorno2=Verdadero
-		FinSi
-		
+
 		si x=raiz(long) Entonces
 			x=i-1
 			p=j+1
 			
-			a=falso
+			retorno2=Verdadero
 		FinSi
 		
 	Fin Mientras
@@ -77,7 +65,7 @@ Funcion calculo ( M, long,muestra)
 			n=n+1
 			M(i,j)=Subcadena(muestra,n,n)
 			
-			Escribir M(i,j) Sin Saltar
+			Escribir M(i,j) "  " Sin Saltar
 		FinPara
 		
 		Escribir ""
@@ -99,7 +87,7 @@ Algoritmo sin_titulo
 	Definir long,P1,i Como Entero
 	
 	muestra="ACDDCADBCDABDBBA"
-	muestra="DDDDDADBd"
+	muestra="DaDDDADBa"
 	
 	muestra=Minusculas(muestra)
 	
@@ -109,7 +97,7 @@ Algoritmo sin_titulo
 	
 	
 	
-	si raiz(long)=(3) o raiz(long)=4 o raiz(long)=37 Entonces
+	si raiz(long)=3 o raiz(long)=4 o raiz(long)=37 Entonces
 		
 		calculo(M, long,muestra)
 		

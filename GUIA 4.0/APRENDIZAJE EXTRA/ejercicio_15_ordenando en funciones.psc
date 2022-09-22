@@ -1,72 +1,10 @@
-Algoritmo sin_titulo
-	
-	Escribir "VENTAS DE LA SEMANA DE 5 PRODUCTOS"
-	
-	Definir M,V,n,i,j,mayor, mayor1,suma,posicion_productos Como Entero
-	
-	Dimension M(5,5), V(5)
-	
-	n=0
-	suma=0
-	
-	
-//	Para i<-0 Hasta 4 Hacer
-//		Para j<-0 Hasta 4 Hacer
-//			
-//			Escribir "DATOS DEL dia " i+1 "-Producto " j+1 "-> "
-//			leer M(j,i)
-//		FinPara
-//	FinPara	
-	
-	
-	
-	Escribir "" 
-	Escribir "             L - M - M - J - V " 
 
-	Para i<-0 Hasta 4 Hacer
-		
-		// damos valores a la matriz "M" y al vector "V" en donde se almacenarán la suma de cada producto
-		Escribir "PRODUCTO " i+1 " : " Sin Saltar
-		V(i)=0
-		Para j<-0 Hasta 4 Hacer
-			
-			M(i,j)=azar(10)
-			
-			V(i)=M(i,j)+V(i) 
-			
-			Escribir M(i,j) " - "Sin Saltar
-		FinPara
-		
+
+SubProceso  suma_cada_dia(M,V2, mayor Por Referencia, posicion_dias Por Referencia )
 	
-		
-		si i=0 Entonces
-			
-			mayor1=V(i)
-			posicion_productos=i    // para poder saber la posicion del producto que se vendió mas en toda la semana
-			
-		sino
-			si V(i)>mayor1 Entonces
-				
-				mayor1=V(i)
-				
-				posicion_productos=i
-				
-			FinSi
-			
-		FinSi
-		
-		Escribir "-> " V(i)
-		
-		
-		
-	FinPara
+	Definir i,j Como Entero
 	
 	
-	
-	
-	Definir V2,posicion_dias Como Entero
-	
-	Dimension V2(5)
 	
 	
 	Para i<-0 Hasta 4 Hacer
@@ -75,14 +13,14 @@ Algoritmo sin_titulo
 		
 		V2(i)=0
 		Para j<-0 Hasta 4 Hacer
-
+			
 			V2(i)=M(j,i)+V2(i) 
-
+			
 			
 			
 		FinPara
 		
-	
+		
 		si i=0 Entonces
 			
 			mayor=V2(i)
@@ -107,6 +45,80 @@ Algoritmo sin_titulo
 		Escribir  V2(i) " - " Sin Saltar
 	FinPara
 	Escribir ""
+	
+FinSubProceso
+
+
+SubProceso  suma_cada_producto(M,V,mayor1 Por Referencia, posicion_productos Por Referencia )  // NOTA: por referencia me permite no inicializar la variable 
+	
+	Definir i,j Como Entero
+	
+	
+	Para i<-0 Hasta 4 Hacer
+		
+		// damos valores a la matriz "M" y al vector "V" en donde se almacenarán la suma de cada producto
+		Escribir "PRODUCTO " i+1 " : " Sin Saltar
+		V(i)=0
+		Para j<-0 Hasta 4 Hacer
+			
+			M(i,j)=azar(10)
+			
+			V(i)=M(i,j)+V(i) 
+			
+			Escribir M(i,j) " - "Sin Saltar
+		FinPara
+		
+		
+		
+		si i=0 Entonces
+			
+			mayor1=V(i)
+			posicion_productos=i    // para poder saber la posicion del producto que se vendió mas en toda la semana
+			
+		sino
+			si V(i)>mayor1 Entonces
+				
+				mayor1=V(i)
+				
+				posicion_productos=i
+				
+			FinSi
+			
+		FinSi
+		
+		Escribir "-> " V(i)
+		
+		
+		
+	FinPara
+	
+FinSubProceso
+
+
+Algoritmo sin_titulo
+	
+	Escribir "VENTAS DE LA SEMANA DE 5 PRODUCTOS"
+	
+	Definir M,V,n,i,j,mayor, mayor1,suma,posicion_productos Como Entero
+	
+	Dimension M(5,5), V(5)
+	
+	n=0
+	suma=0
+
+	
+	Escribir "" 
+	Escribir "             L - M - M - J - V " 
+	
+	
+	
+	suma_cada_producto(M,V, mayor1, posicion_productos)
+	
+	Definir V2,posicion_dias Como Entero
+	Dimension V2(5)
+	
+	suma_cada_dia(M,V2,mayor, posicion_dias )
+	
 	
 	
 	Escribir "El DIA de la semana más vendido es: "
@@ -136,11 +148,8 @@ Algoritmo sin_titulo
 
 
 		
-	
 	Escribir ""
 	//-------------------------------------------------------------------
-	
-	
 	
 	
 	
@@ -159,9 +168,7 @@ Algoritmo sin_titulo
 		Mayor_Producto(i)=0
 		
 		Para j<-0 Hasta 4 Hacer
-			
-			
-			
+		
 			si j=0 Entonces
 				
 				Mayor_Producto(i)=M(i,j)
@@ -169,29 +176,20 @@ Algoritmo sin_titulo
 				
 			SiNo
 				
-				
 				si M(i,j)>Mayor_Producto(i) Entonces
 					
 					Mayor_Producto(i)=M(i,j)
 					posicionXproducto(i)=j
 				FinSi
 				
-				
 			FinSi
-			
-			
-			
-			
 			
 		FinPara
 		
 	FinPara
 	
 	
-	
 
-	
-	
 	// el mayor de cada día
 	
 	Definir Mayor_dia,posicionXdia Como entero
