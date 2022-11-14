@@ -38,15 +38,16 @@ SubProceso  suma_cada_dia(M,V2, mayor Por Referencia, posicion_dias Por Referenc
 		
 	FinPara
 	
-	Escribir "              S  - S  - S  - S  - S" 
+	Escribir "             S - S - S - S - S" 
 	
-	Escribir "             " SIN SALTAR	
+	Escribir "SUMA TOTAL   " SIN SALTAR	
 	Para i<-0 Hasta 4 Hacer 
 		Escribir  V2(i) " - " Sin Saltar
 	FinPara
 	Escribir ""
 	
 FinSubProceso
+
 
 
 SubProceso  suma_cada_producto(M,V,mayor1 Por Referencia, posicion_productos Por Referencia )  // NOTA: por referencia me permite no inicializar la variable 
@@ -86,7 +87,7 @@ SubProceso  suma_cada_producto(M,V,mayor1 Por Referencia, posicion_productos Por
 			
 		FinSi
 		
-		Escribir "-> " V(i)
+		Escribir "> " V(i)
 		
 		
 		
