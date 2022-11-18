@@ -21,3 +21,15 @@ https://www.youtube.com/watch?v=5jJqg4hmRbg&t=2778s
 
 Espero este material pdf y los ejercicios resueltos les sea de mucha utilidad y puedan sacarle el máximo potencial, sobre todo para aquellos que quieren entrar al mundo de la programación, esto será una base muy sólido para los siguientes lenguajes de proamgración que quieran aprender.
 
+## IMPORTANTE
+El archivo llamado "Perfil_EggTech_PseInt" es un perfil flexible que usé para PSeInt.
+
+Para qué me sirve un perfil flexible en PSeInt?
+En PSeInt podemos elegir entre distintos perfiles de Lenguaje:
+- El perfil Estricto, hace que PSEINT deba seguir las normas de la
+mayoría de los lenguajes de bajo nivel.
+- El perfil Flexible es menos riguroso y no da error si nos
+saltamos algunas de esas reglas.
+
+
+
